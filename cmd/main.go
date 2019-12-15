@@ -29,7 +29,7 @@ func init() {
 	flags.String("dns.zone", "dynamic.wacao.com.", "zone")
 	flags.String("dns.addr", ":8053", "listen address of dns server")
 
-	flags.String("http.path", "/", "base path of http api")
+	flags.String("http.base", "/", "base path of http api")
 	flags.String("http.addr", ":8080", "listen address of http api")
 
 	flags.String("data", "rsdns-data.json", "data file")
@@ -49,6 +49,7 @@ func initConfig() {
 	_ = viper.BindPFlag("verbose", rootCmd.Flags().Lookup("verbose"))
 	_ = viper.BindPFlag("dns.zone", rootCmd.Flags().Lookup("dns.zone"))
 	_ = viper.BindPFlag("dns.addr", rootCmd.Flags().Lookup("dns.addr"))
+	_ = viper.BindPFlag("http.base", rootCmd.Flags().Lookup("http.base"))
 	_ = viper.BindPFlag("http.addr", rootCmd.Flags().Lookup("http.addr"))
 
 	_ = viper.BindPFlag("data", rootCmd.Flags().Lookup("data"))

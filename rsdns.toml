@@ -1,0 +1,14 @@
+data = ""
+
+[dns]
+zone = "dynamic.domain.tld."
+addr = ":8053"
+
+ns=[
+  {ns="ddns1.domain.tld.", ip="127.0.1.1", ttl=86400},
+  {ns="ddns2.domain.tld.", ip="127.0.2.2", ttl=86400},
+]
+
+[http]
+path = "/api"
+addr = ":8080"
