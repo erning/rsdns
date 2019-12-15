@@ -20,9 +20,10 @@ import (
 )
 
 type data_t map[string]struct {
-	IP  string `json:"ip,omitempty"`
-	TTL uint32 `json:"ttl,omitempty"`
-	Key string `json:"key,omitempty"`
+	IP      string `json:"ip,omitempty"`
+	TTL     uint32 `json:"ttl,omitempty"`
+	Key     string `json:"key,omitempty"`
+	Updated string `json:"updated,omitempty"`
 }
 
 var data data_t
@@ -246,6 +247,7 @@ func handleHttpPlain(w http.ResponseWriter, r *http.Request) {
 
 	if item.IP != ip {
 		item.IP = ip
+		item.Updated = time.Now().Format(time.RFC3339)
 		data[host] = item
 		writeData()
 	}
