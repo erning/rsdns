@@ -1,4 +1,4 @@
-data = ""
+data = "rsdns-data.json"
 
 [dns]
 zone = "dynamic.domain.tld."
