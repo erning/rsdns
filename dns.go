@@ -251,5 +251,5 @@ func handleHttpPlain(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.WriteHeader(http.StatusOK)
-	_, _ = w.Write([]byte("done\n"))
+	_, _ = w.Write([]byte(fmt.Sprintf("ok. %s\n", ip)))
 }
