@@ -15,6 +15,4 @@ fi
 export GOARCH
 export GOOS
 
-go build \
-  -ldflags "-s" \
-  -o rsdns  "./cmd/main.go"
+go build

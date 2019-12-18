@@ -15,7 +15,6 @@ import (
 	"time"
 
 	"github.com/miekg/dns"
-
 	"github.com/spf13/viper"
 )
 
